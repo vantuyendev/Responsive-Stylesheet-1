@@ -1,0 +1,188 @@
+/* Base styles - Mobile View */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, #FF0000 0%, #CC0000 100%);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+main {
+    padding: 2rem 1rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.box {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid #ddd;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 1rem;
+}
+
+.box h2 {
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.box .type {
+    font-weight: bold;
+    color: #666;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.box p {
+    color: #555;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.stats span {
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+/* Pokemon Type Colors */
+.box.fire {
+    border-color: #FF6B6B;
+}
+
+.box.water {
+    border-color: #4ECDC4;
+}
+
+.box.grass {
+    border-color: #95E1D3;
+}
+
+.box.electric {
+    border-color: #FFD93D;
+}
+
+.box.psychic {
+    border-color: #A78BFA;
+}
+
+.box.dragon {
+    border-color: #6366F1;
+}
+
+footer {
+    background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Query #1 - Tablet View (772px and above) */
+@media screen and (min-width: 772px) {
+    .box {
+        width: 45%;
+        display: inline-block;
+    }
+    
+    .box img {
+        max-height: 30vh;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Media Query #2 - Large Screen View (998px and above) */
+@media screen and (min-width: 998px) {
+    .box {
+        width: 30%;
+    }
+    
+    header h1 {
+        font-size: 3rem;
+    }
+    
+    nav a {
+        margin: 0 1.5rem;
+    }
+}
